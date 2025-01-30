@@ -13,6 +13,7 @@ class IdeaList {
     this._validTags.add('education');
     this._validTags.add('health');
     this._validTags.add('inventions');
+    this._validTags.add('food');
   }
 
   async getIdeas() {
