@@ -11,6 +11,7 @@ class IdeaForm {
     this._form.addEventListener('submit', this.handleSubmit.bind(this));
     this._form.elements.tagSelect.addEventListener('change', () => {
       if (this._form.elements.tagSelect.value === 'default') {
+        this._form.elements.tag.value = '';
         return;
       }
       this._form.elements.tag.value = this._form.elements.tagSelect.value;
@@ -59,6 +60,7 @@ class IdeaForm {
         <form id="idea-form">
           <div class="form-control">
             <label for="idea-text">Enter a Username</label>
+            <span>(Please use only one username)</span>
             <input type="text" name="username" id="username" value="${
               localStorage.getItem('username')
                 ? localStorage.getItem('username')
